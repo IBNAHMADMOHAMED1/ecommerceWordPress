@@ -1,0 +1,84 @@
+// version 3
+.stk-block-button {
+
+	.stk-button {
+		border-radius: var(--buttonBorderRadius, 3px);
+	}
+	
+	// --stk-button-padding: var(--button-padding, 5px 20px);
+	--stk-button-text-color: var(--buttonTextInitialColor);
+	--stk-button-background-color: var(--buttonInitialColor);
+}
+
+
+.wp-block-stackable-columns {
+
+	&.alignfull > .stk-row:not(.alignfull) {
+		width: var(--block-width) !important;
+	}
+}
+
+
+// maybe remove later
+.wp-block-stackable-icon-list ul,
+.wp-block-stackable-icon-list ul li:last-child {
+	margin-bottom: 0 !important;
+}
+
+
+
+// version 2
+.ugb-main-block.alignfull {
+
+	&.ugb--has-block-background {
+		padding-left: 0;
+		padding-right: 0;
+
+		> .ugb-inner-block--center,
+		> .ugb-inner-block--wide {
+			width: var(--block-width) !important;
+		}
+
+		> .ugb-inner-block--wide {
+			max-width: var(--block-wide-max-width);
+			min-width: initial !important;
+		}
+	}
+}
+
+.ugb-main-block {
+	margin-top: 0;
+}
+
+// shadows
+.ugb--shadow-6 {
+	box-shadow: 0 20px 80px 0 rgba(193,199,212,0.25) !important;
+}
+
+// header
+.ugb-header.ugb-header--v3 {
+
+	.ugb-header__item {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+
+// special resets
+.ct-special-column .ugb-column__item,
+.ct-special-container .ugb-container__wrapper {
+	overflow: visible !important;
+}
+
+.ct-special-column .ugb-column__item {
+	background-color: transparent !important;
+}
+
+// stack columns on tablet
+@media screen and (max-width: 1025px) {
+	div.ct-stack-md > .ugb-inner-block > .ugb-block-content > .ugb-columns__item {
+		grid-auto-flow: row !important;
+		grid-template-columns: 1fr !important;
+	}
+}

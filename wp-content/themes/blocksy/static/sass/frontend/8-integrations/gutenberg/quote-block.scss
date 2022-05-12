@@ -1,0 +1,50 @@
+// Quote block
+.wp-block-quote {
+	padding: var(--padding) !important;
+
+	&:not(.has-text-align-center):not(.has-text-align-right) {
+		--padding: 0 0 0 30px;
+		border-left: 4px solid var(--paletteColor1);
+	}
+
+	&.has-text-align-center {
+		--padding: 30px 1em;
+		border-top: 3px solid var(--paletteColor1);
+		border-bottom: 3px solid var(--paletteColor1);
+	}
+
+	&.has-text-align-right {
+		--padding: 0 30px 0 0;
+		border-right: 4px solid var(--paletteColor1);
+	}
+
+	// default style
+	&.is-style-default {
+		p {
+			--content-spacing: 1em;
+		}
+	}
+
+	// large style
+	&.is-style-large {
+		p {
+			--content-spacing: 1em;
+			font-size: var(--fontSize);
+			font-style: var(--fontStyle);
+			line-height: var(--lineHeight);
+		}
+	}
+
+	p {
+		&:last-of-type {
+			--content-spacing: 0;
+		}
+	}
+
+	cite {
+		// display: inline-block;
+		display: block;
+		margin-top: 15px;
+		font-size: 14px !important;
+	}
+}

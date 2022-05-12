@@ -1,0 +1,7 @@
+article > .entry-content {
+	
+	> table:not(.alignfull),
+	> iframe:not(.alignfull) {
+		width: var(--default-editor, var(--container-width));
+	}
+}

@@ -1,0 +1,26 @@
+.single-courses {
+	
+	.tutor-container {
+		.tutor-row {
+			margin-left: 0;
+			margin-right: 0;
+		}
+
+		[class*="tutor-col"] {
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+		.tutor-col-8 {
+			box-shadow: var(--has-boxed, var(--box-shadow));
+			border-radius: var(--has-boxed, var(--border-radius));
+			padding: var(--has-boxed, var(--boxed-content-spacing));
+		}
+	}
+
+	.tutor-single-course-segment {
+		&:last-child {
+			margin-bottom: 0
+		}
+	}
+}

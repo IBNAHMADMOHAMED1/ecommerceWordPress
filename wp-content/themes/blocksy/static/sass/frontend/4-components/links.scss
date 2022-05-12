@@ -1,0 +1,72 @@
+$selector: 
+	'.entry-content p > a', 
+	// '.entry-content h1 > a',
+	// '.entry-content h2 > a', 
+	// '.entry-content h3 > a', 
+	// '.entry-content h4 > a',
+	// '.entry-content h5 > a', 
+	// '.entry-content h6 > a', 
+	'.entry-content em > a',
+	'.entry-content strong > a', 
+	'.entry-content > ul a',
+	'.entry-content > ol a',
+	// '.wp-block-column > ul a',
+	// '.wp-block-column > ol a', 
+	'.wp-block-table a',
+	'.ct-link-styles',
+	// '[class*="_inner-container"] > ul a',
+	// '[class*="_inner-container"] > ol a',
+	// '.gdpr-confirm-policy a'
+;
+
+a {
+	color: var(--linkInitialColor);
+	text-decoration: var(--has-link-decoration, var(--textDecoration, none));
+
+	&:hover {
+		color: var(--linkHoverColor);
+	}
+}
+
+// type 2
+[data-link='type-2'] {
+	#{$selector} {
+		--textDecoration: underline;
+	}
+}
+
+// type 3 & 4 & 5
+[data-link='type-3'],
+[data-link='type-4'],
+[data-link='type-5'] {
+	#{$selector} {
+		background-position: var(--has-link-decoration, 0% 100%);
+		background-repeat: var(--has-link-decoration, no-repeat);
+	}
+}
+
+// type 4
+[data-link='type-4'] {
+	#{$selector} {
+		background-size: var(--has-link-decoration, 100% 1px);
+		background-image: var(
+			--has-link-decoration,
+			linear-gradient(currentColor, currentColor)
+		);
+	}
+}
+
+
+// links speciffic cases
+footer.ct-footer [data-link] a,
+[data-link] .ct-posts-shortcode .entry-title a{
+	--has-link-decoration: var(--false);
+
+	&:hover {
+		color: var(--linkHoverColor);
+	}
+}
+
+footer.ct-footer [data-link="underline"] a {
+	text-decoration: underline;
+}

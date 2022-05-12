@@ -1,0 +1,83 @@
+.blocksy-fs-optin-dashboard #fs_connect {
+
+	&.require-license-key {
+
+		.fs-license-key-container {
+			width: 100%;
+			margin: 30px 0 0 0;
+
+			input[type=text] {
+				min-height: 49px;
+				padding: 0 12px;
+				line-height: initial;
+			}
+
+			.dashicons {
+				top: 17px;
+				right: 10px;
+				font-size: 16px;
+				height: 16px;
+				width: 16px;
+			}
+
+			.show-license-resend-modal {
+				font-size: 0.9em;
+				margin-top: 10px;
+			}
+		}
+
+		.fs-actions {
+			flex-wrap: wrap;
+
+			form {
+				width: 100%;
+			}
+
+			#license_issues_link {
+				flex: 1 1 auto;
+				text-align: left;
+			}
+		}
+
+		.fs-permissions p {
+			text-align: left;
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	#fs_marketing_optin {
+		border: none;
+		padding: 30px 0;
+		margin: 30px 0 0 0;
+		box-shadow: none;
+		border-top: 1px dashed #ddd;
+		border-bottom: 1px dashed #ddd;
+
+		&.error {
+			background: transparent;
+		}
+
+		.fs-input-label {
+			margin-left: 22px;
+		}
+	}
+
+
+	.fs-freemium-licensing {
+		border-top: 1px dashed #ddd;
+		padding: 30px 0;
+		background: transparent;
+
+		p {
+			text-align: left;
+			color: #444;
+
+			a {
+				color: #0073aa;
+			}
+		}
+	}
+}

@@ -1,0 +1,56 @@
+.tutor-container,
+.tutor-course-filter-wrapper {
+	width: var(--container-width);
+	max-width: var(--normal-container-max-width);
+	padding-left: 0;
+	padding-right: 0;
+}
+
+
+// filters mode
+.tutor-course-filter-wrapper {
+	overflow: visible;
+	display: flex;
+	flex-wrap: wrap;
+
+	> div {
+		padding: 0;
+		float: none !important;
+
+		&:first-child {
+			@media (min-width: 992px) {
+				flex: 0 0 25%;
+				max-width: 25%;
+				padding-right: 40px;
+			}
+		}
+
+		&:last-child {
+			@media (min-width: 992px) {
+				flex: 0 0 75%;
+				max-width: 75%;
+			}
+
+			.tutor-course-filter-wrap {
+				margin-bottom: 30px;
+
+				select[name=tutor_course_filter] {
+					font-size: 15px;
+					color: var(--form-text-initial-color, var(--color));
+					padding: 0 30px 0 13px;
+					border-radius: var(--form-field-border-radius, 3px);
+					border: var(--form-field-border-width) var(--form-field-border-style, solid) var(--form-field-border-initial-color);
+				}
+			}
+		}
+
+		@media (max-width: 991px) {
+			flex: 0 0 100%;
+    		max-width: 100%;
+		}
+	}
+	
+	.tutor-container {
+		width: 100%;
+	}
+}
